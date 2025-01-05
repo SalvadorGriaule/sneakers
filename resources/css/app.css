@@ -1,0 +1,363 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Kumbh;
+    src: url(../font/KumbhSans-VariableFont_wght.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-family: Kumbh;
+}
+
+div>img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+/* header */
+
+header {
+    position: relative;
+    z-index: 20;
+    background-color: white;
+}
+
+#trueH {
+    padding-block: 1.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-shadow: 0px 0px 39px 0px rgba(180, 180, 180, 0.73);
+    -webkit-box-shadow: 0px 0px 39px 0px rgba(180, 180, 180, 0.73);
+    -moz-box-shadow: 0px 0px 39px 0px rgba(180, 180, 180, 0.73);
+    position: relative;
+    z-index: 20;
+    background-color: white;
+}
+
+#trueH>div {
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+#trueH i {
+    font-size: 1.75rem;
+    color: rgb(100, 100, 100);
+}
+
+#leftCorn i {
+    margin-inline: 1.5rem;
+    font-size: 1.3rem;
+    vertical-align: bottom;
+}
+
+nav {
+    display: none;
+}
+
+#menuBurger {
+    position: absolute;
+    z-index: 0;
+    top: -122%;
+    left: 0;
+}
+
+#menuBurger>li {
+    text-align: center;
+    width: 99.75vw;
+    font-size: x-large;
+    background-color: white;
+    border: 1px solid black;
+    padding-block: 0.75vh;
+    position: relative;
+}
+
+li:last-child {
+    border-end-end-radius: 15px;
+    border-end-start-radius: 15px;
+}
+
+#rightCorn {
+    width: fit-content;
+    padding-block-end: 1px;
+    align-items: center;
+}
+
+#rightCorn div {
+    width: 1.95rem;
+}
+
+#rightCorn div:last-child {
+    margin-inline: 0.75rem 1rem;
+}
+
+h1 {
+    font-weight: 600;
+    height: 35px;
+}
+
+#frontimg {
+    display: none;
+}
+
+header>p {
+    padding: 2vh 1.25rem;
+}
+
+/* main */
+
+.article h2 {
+    font-weight: 500;
+    font-size: 1.75rem;
+    margin-block-end: 0.5rem;
+}
+
+.article h3 {
+    font-weight: 500;
+}
+
+.article p {
+    color: rgb(100, 100, 100);
+    font-size: 0.9rem;
+}
+
+.contentart {
+    padding: 0.5vh 1rem;
+    margin-block-end: 4rem;
+}
+
+.price {
+    margin-block-start: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price h3 {
+    color: rgb(180, 180, 180);
+    text-decoration: line-through;
+}
+
+.priceFirst {
+    display: flex;
+}
+
+.priceFirst h3 {
+    margin-inline: 1rem auto;
+    background-color: rgb(255, 228, 207);
+    padding: 0.5vh;
+    border-radius: 5px;
+    color: rgb(255, 125, 26);
+    font-weight: 300;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.price h2 {
+    margin: 0;
+}
+#burger{
+    width: 1.5rem;
+    margin-inline: 0.5rem;
+}
+/* bouton des prix */
+
+.inpPrice {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 1.5vh;
+    border-radius: 5px;
+    margin-block: 2vh;
+    height: 24px;
+}
+
+.inpPrice p {
+    color: black;
+}
+
+.inpPrice input {
+    border: 0;
+    color: rgb(255, 125, 26);
+    background-color: transparent;
+    font-size: large;
+}
+
+button {
+    background-color: rgb(255, 125, 26);
+    display: flex;
+    border: 0;
+    width: 100%;
+    justify-content: center;
+    padding-block: 2vh;
+    color: white;
+    border-radius: 5px;
+    box-shadow: -1px 11px 33px 0px rgba(255, 125, 26, 0.69);
+    -webkit-box-shadow: -1px 11px 33px 0px rgba(255, 125, 26, 0.69);
+    -moz-box-shadow: -1px 11px 33px 0px rgba(255, 125, 26, 0.69);
+}
+
+button>div>i {
+    padding-inline-end: 0.2rem;
+}
+
+/* footer */
+
+footer {
+    background-color: rgb(255, 125, 26);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-block: 2vh;
+}
+
+footer h4 {
+    font-weight: 400;
+    font-size: larger;
+    margin-block-end: 0.25vh;
+}
+
+footer i {
+    font-size: large;
+    padding-inline: 0.2rem;
+}
+
+@media screen and (min-width: 576px) {
+
+    /* header  */
+    #burger{
+        display: none;
+    }
+    #leftCorn i {
+        display: none;
+    }
+
+    h1 {
+        margin-inline-start: 2.25rem;
+        font-size: 2.5rem;
+        height: 40px;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        margin-inline: 0.75rem;
+        color: rgb(100, 100, 100);
+        font-size: 1.15rem;
+    }
+
+    #trueH i {
+        font-size: 2rem;
+        color: rgb(100, 100, 100);
+    }
+
+    #rightCorn div {
+        width: 2.5rem;
+    }
+
+    #frontimg {
+        display: flex;
+        background-image: url(../img/skateboarder.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        margin-inline: 10.5%;
+        align-items: flex-end;
+        justify-content: flex-end;
+        color: rgb(255, 125, 26);
+        padding: 0 2rem 3vh;
+    }
+
+    #frontimg h2 {
+        font-weight: 500;
+        font-size: 5.1rem;
+    }
+
+    header>p {
+        margin: 0 0 2.5vh 10.5%;
+    }
+
+    /* main */
+
+    main {
+        margin-inline: 12.75%;
+    }
+
+    .article {
+        display: flex;
+        flex-direction: row;
+        margin-block-end: 9vh;
+    }
+
+    .imgart {
+        width: 46%;
+    }
+    .imgart>img{
+        border-radius: 7.5%;
+        overflow: hidden;
+    }
+
+    .contentart {
+        margin: 0;
+        padding-inline: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+
+    .contentart h2 {
+        margin-block-end: 1vh;
+
+    }
+
+    .price {
+        margin-block-start: 1vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .price>div {
+        display: flex;
+    }
+
+    .price h2 {
+        margin: 0;
+    }
+
+    
+
+    .article:nth-child(2n) {
+        flex-direction: row-reverse;
+    }
+
+    /* footer */
+
+    footer h4 {
+        font-size: x-large;
+    }
+
+    footer i {
+        font-size: x-large;
+    }
+}
