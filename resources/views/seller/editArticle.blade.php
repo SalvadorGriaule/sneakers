@@ -34,10 +34,10 @@
                 <label for="category">Choisir une categorie ou plus</label>
                 @isset($catg[0])
                     @isset($product['listCategory'][0])
-                        <div id="app2" class="w-2/3" data-catg="{{ $product['listCategory'][0]->name }}"></div>
+                        <div id="multiSelect" class="w-2/3" data-catg="{{ $product['listCategory']->select("id") }}"></div>
                     @endisset
                     @empty($product['listCategory'][0])
-                        <div id="app2" class="w-2/3"></div>
+                        <div id="multiSelect" class="w-2/3"></div>
                     @endempty
                     @vite('resources/js/Componants/Svelte/multiSelect/multiSelect/multiSelect.js')
                 @endisset

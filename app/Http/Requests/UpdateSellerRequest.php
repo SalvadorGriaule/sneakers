@@ -2,6 +2,11 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Product;
+use Illuminate\Http\Request;
+use App\Models\Categories_products;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateSellerRequest extends FormRequest
@@ -11,9 +16,16 @@ class UpdateSellerRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
+
+    protected function prepareForValidation(): void
+    {
+        $this->merge([
+            'categorie' => json_decode($this->categorie)
+        ]);
+    }
     /**
      * Get the validation rules that apply to the request.
      *
@@ -22,7 +34,15 @@ class UpdateSellerRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'price' => 'required|numeric|min:0',
+            'image' => 'image',
+            'quantité' => 'required|numeric|min:0',
+            'categorie' => 'array',
+            'categorie.*' => 'numeric|exists:categories,id'
         ];
     }
+
+    
 }
